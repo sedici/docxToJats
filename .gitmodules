@@ -1,0 +1,4 @@
+[submodule "citation-parser-ojs"]
+	path = citation-parser-ojs
+	url = git@github.com:sedici/citation-parser-ojs.git
+	branch = dev
