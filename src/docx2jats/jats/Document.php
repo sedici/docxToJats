@@ -9,6 +9,8 @@
  * @brief represent JATS XML Document; transfers the data from Document Object Model to PHP DOMDocument
  */
 
+require_once __DIR__ . '/../../../citation-parser-ojs/ReferencesManager.php';
+
 use docx2jats\DOCXArchive;
 use docx2jats\jats\Par as JatsPar;
 use docx2jats\objectModel\body\Par;
@@ -17,6 +19,8 @@ use docx2jats\jats\Figure as JatsFigure;
 use docx2jats\objectModel\body\Table;
 use docx2jats\objectModel\DataObject;
 use docx2jats\objectModel\Document as DOCXDocument;
+use ReferencesManager;
+use ReflectionObject;
 
 class Document extends \DOMDocument {
 	/* @var $docxArchive \docx2jats\DOCXArchive */
@@ -57,7 +61,7 @@ class Document extends \DOMDocument {
 		$this->extractContent();
 		$this->cleanContent();
 		$this->extractMetadata();
-		$this->extractReferences();
+		$this->extractParserReferences();
 	}
 
 	public function getJatsFile(string $pathToFile) {
@@ -243,6 +247,41 @@ class Document extends \DOMDocument {
 		$articleMetaNode->appendChild($titleGroupNode);
 		$articleTitleNode = $this->createElement("article-title");
 		$titleGroupNode->appendChild($articleTitleNode);
+	}
+
+	private function filterReferences($references): array{
+		$filteredReferences = array();
+
+		$pattern = '/"id":"ITEM[^"]*"/';
+		//Getting all references in an array
+		foreach ($references as $reference){
+			//Accessing to 'rawReference' property of $references using ReflectionObject
+			$reflection = new ReflectionObject($reference);
+			$rawReference = $reflection->getProperty('rawReference');
+			$rawReference->setAccessible(true);
+
+			//Obtaining text value of "rawReference"
+			$textReference = $rawReference->getValue($reference);
+
+			//Filtering out unwanted references that have "id":"item-(number)". If $pattern doesn't match with $textReference, this same one is saved in $filteredReferences array.
+			if (!preg_match($pattern, $textReference)) {
+				$filteredReferences[] = $rawReference->getValue($reference);
+			}
+		}
+
+		return $filteredReferences;
+	}
+
+	private function extractParserReferences(): void {
+		$document = $this->docxArchive->getDocument();
+		$references = $document->getReferences();
+		if (empty($references)) return;
+
+		$filteredArrayReferences = $this->filterReferences($references);
+		print_r($filteredArrayReferences);
+
+		//Using ReferencesManager to process references from $filteredArrayReferences and return a JATS dom.
+		$refsManager = new ReferencesManager($this, $this->back, $filteredArrayReferences);
 	}
 
 	private function extractReferences() : void {
