@@ -15,7 +15,7 @@ use docx2jats\DOCXArchive;
 use docx2jats\jats\Document;
 
 // Parsing DOCX
-$path = "samples/input/example.docx";
+$path = "samples/input/testWithReferences.docx";
 $docxArchive = new DOCXArchive($path);
 
 $contents = $docxArchive->getDocument()->getContent();
