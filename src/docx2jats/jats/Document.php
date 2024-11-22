@@ -278,7 +278,6 @@ class Document extends \DOMDocument {
 		if (empty($references)) return;
 
 		$filteredArrayReferences = $this->filterReferences($references);
-		print_r($filteredArrayReferences);
 
 		//Using ReferencesManager to process references from $filteredArrayReferences and return a JATS dom.
 		$refsManager = new ReferencesManager($this, $this->back, $filteredArrayReferences);
