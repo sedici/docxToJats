@@ -12,9 +12,9 @@ DocxToJats is a PHP library that converts DOCX archives that comply OOXML standa
 
 DocxToJats is used as a submodule to the DOCX Converter Plugin, written for Open Journal Systems. Unfortunately DOCX archive doesn't contain much metadata and JATS `front` elements remain not populated, thus, the best way would be to integrate docxToJats with editorial manager from where article's metadata can be retrieved. DOCX Converter Plugin is such an example.    
 
-## Contribuciones
+## Contributions
 
-Este proyecto recibió contribuciones de:
+This project has received contributions from:
 
-- **PREBI-SEDICI**, Programa de Bibliotecas y Repositorios Institucionales, **Universidad Nacional de La Plata**  
-  Sitio web: [https://prebi-sedici.unlp.edu.ar/](https://prebi-sedici.unlp.edu.ar/)
+- **PREBI-SEDICI**, Program of Libraries and Institutional Repositories, **National University of La Plata**  
+  Website: [https://prebi-sedici.unlp.edu.ar/](https://prebi-sedici.unlp.edu.ar/)
