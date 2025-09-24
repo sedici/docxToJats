@@ -281,6 +281,11 @@ class Document extends \DOMDocument {
 
 		//Using ReferencesManager to process references from $filteredArrayReferences and return a JATS dom.
 		$refsManager = new ReferencesManager($this, $this->back, $filteredArrayReferences);
+
+		file_put_contents(
+            __DIR__ . '/back.xml',
+			print_r($this->back->ownerDocument->saveXML($this->back), true)
+		);
 	}
 
 	private function extractReferences() : void {
