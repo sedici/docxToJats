@@ -28,31 +28,6 @@
       </element-citation>
     </ref>
     <ref id="parser_1">
-      <mixed-citation>Aikhenwald, A. (2012). The essence of mirativity. Linguistic Typology, 16(3), 435-485. https://doi.org/10.1515/lity-2012-0017</mixed-citation>
-      <element-citation publication-type="journal">
-        <person-group person-group-type="author">
-          <name>
-            <surname>Alexandra Y. Aikhenvald</surname>
-          </name>
-        </person-group>
-        <year>2012</year>
-        <source>Linguistic Typology</source>
-        <article-title>The essence of mirativity</article-title>
-        <volume>16</volume>
-        <issue>3</issue>
-        <fpage>435</fpage>
-        <lpage>485</lpage>
-        <ext-link ext-link-type="uri" xlink:href="https://doi.org/10.1515/lity-2012-0017">https://doi.org/10.1515/lity-2012-0017</ext-link>
-        <uri>https://doi.org/10.1515/lity-2012-0017</uri>
-        <pub-id pub-id-type="doi">10.1515/lity-2012-0017</pub-id>
-        <month>1</month>
-        <day>27</day>
-        <doi>https://doi.org/10.1515/lity-2012-0017</doi>
-        <issn-l>1430-0532</issn-l>
-        <issn>1613-415X</issn>
-      </element-citation>
-    </ref>
-    <ref id="parser_2">
       <element-citation publication-type="thesis">
         <person-group person-group-type="author">
           <name>
@@ -69,7 +44,7 @@
       </element-citation>
       <mixed-citation>Angelina Oliveira, A. (2024). Producciones escritas de angloparlantes en el marco de exámenes CELU [Tesis de doctorado, Universidad Nacional de Misiones]. https://hdl.handle.net/20.500.12219/5564</mixed-citation>
     </ref>
-    <ref id="parser_3">
+    <ref id="parser_2">
       <element-citation publication-type="confproc">
         <person-group person-group-type="author">
           <name>
@@ -84,7 +59,7 @@
       </element-citation>
       <mixed-citation>González Vázquez, M. (1998). La polisemia de 'poder' en e/le: acerca de la pertinencia comunicativa de la posibilidad lateral y bilateral [Ponencia]. IX Congreso Internacional de ASELE. Santiago de Compostela, España.</mixed-citation>
     </ref>
-    <ref id="parser_4">
+    <ref id="parser_3">
       <element-citation publication-type="chapter">
         <person-group person-group-type="author">
           <name>
@@ -105,7 +80,7 @@
       </element-citation>
       <mixed-citation>Grice, P. (1991). Lógica de la conversación. En L. Valdées Villanueva (Ed.), La búsqueda del Significado (pp. 516-543). Tecnos. (Trabajo original publicado en 1975).</mixed-citation>
     </ref>
-    <ref id="parser_5">
+    <ref id="parser_4">
       <element-citation publication-type="chapter">
         <person-group person-group-type="author">
           <name>
@@ -126,7 +101,7 @@
       </element-citation>
       <mixed-citation>Hoye, L. (2008). Evidentiality in discourse: A pragmatic and empirical account. En J. Romero (Ed.), Pragmatics and corpus linguistics (pp. 151-174). Mouton de Gruyter.</mixed-citation>
     </ref>
-    <ref id="parser_6">
+    <ref id="parser_5">
       <element-citation publication-type="chapter">
         <person-group person-group-type="author">
           <name>
@@ -151,7 +126,7 @@
       </element-citation>
       <mixed-citation>Sperber, D. y Wilson, D. (1991). Sobre la definición de Relevancia. En L. Valdés Villanueva (Ed.), La búsqueda del significado (pp. 583-598). Tecnos. (Trabajo original publicado en 1986).</mixed-citation>
     </ref>
-    <ref id="parser_7">
+    <ref id="parser_6">
       <element-citation publication-type="journal">
         <person-group person-group-type="author">
           <name>
@@ -169,7 +144,7 @@
       </element-citation>
       <mixed-citation>Vatrican, A. (2015). La modalidad en la gramática: la capacidad en las construcciones saber y poder infinitivo. Revista Española de Lingüística, 45(2), 115–141. </mixed-citation>
     </ref>
-    <ref id="parser_8">
+    <ref id="parser_7">
       <element-citation publication-type="chapter">
         <person-group person-group-type="author">
           <name>
@@ -198,7 +173,7 @@
       </element-citation>
       <mixed-citation>Fedigan, L. M. y Strum, S. (1999). A brief history of primate studies: national traditions, disciplinary origins, and stages in North American field research. En P. Dolhinow y A. Fuentes (Eds.), The non-human primates. (pp. 250-269). Mountain View USA Mayfield Publishing Company.</mixed-citation>
     </ref>
-    <ref id="parser_9">
+    <ref id="parser_8">
       <element-citation publication-type="chapter">
         <person-group person-group-type="author">
           <name>
@@ -231,7 +206,7 @@
       </element-citation>
       <mixed-citation>Matsuzawa, T. y Yamakoshi, G. (1996). Comparison of chimpanzee material culture between Bossou and Nimba, West Africa. En A. Russon, K. Bard y S. Parkers (Eds.), Reaching into thought (pp. 211-232). United Kingdom Cambridge University Press.</mixed-citation>
     </ref>
-    <ref id="parser_10">
+    <ref id="parser_9">
       <element-citation publication-type="chapter">
         <person-group person-group-type="author">
           <name>
@@ -240,11 +215,8 @@
           </name>
           <name>
             <surname>Carpenter</surname>
-            <given-names>M.</given-names>
+            <given-names>M. </given-names>
           </name>
-          <collab>
-            <named-content content-type="name">Universidad Nacional de La Plata</named-content>
-          </collab>
         </person-group>
         <year>2002</year>
         <chapter-title>Three sources of information in social learning.</chapter-title>
@@ -261,22 +233,38 @@
           </name>
         </person-group>
       </element-citation>
-      <mixed-citation>Call, J. y Carpenter, M., Universidad Nacional de La Plata. (2002). Three sources of information in social learning. En K. Dautenhahn y C. Nehaniv (Eds.), Imitation in animals and artifacts (pp. 211-228). Cambridge, USA: MIT Press.</mixed-citation>
+      <mixed-citation>Call, J. y Carpenter, M. (2002). Three sources of information in social learning. En K. Dautenhahn y C. Nehaniv (Eds.), Imitation in animals and artifacts (pp. 211-228). Cambridge, USA: MIT Press.</mixed-citation>
+    </ref>
+    <ref id="parser_10">
+      <mixed-citation>Hola. Esto es una referencia mal escirita (2023). --- ERRORS FOUND IN THESE SECTIONS: "No institution found in OpenAlex for the name "Hola. Esto es una referencia mal escirita". Title. "</mixed-citation>
     </ref>
     <ref id="parser_11">
-      <mixed-citation>Hola. Esto es una referencia mal escirita (2023). --- ERRORS FOUND IN THESE SECTIONS: "Title. "</mixed-citation>
-    </ref>
-    <ref id="parser_12">
       <mixed-citation>-sawda-w2 --- ERRORS FOUND IN THESE SECTIONS: "Author. Date. Title. "</mixed-citation>
     </ref>
-    <ref id="parser_13">
+    <ref id="parser_12">
       <mixed-citation>21.sc12. --- ERRORS FOUND IN THESE SECTIONS: "Author. Date. Title. "</mixed-citation>
     </ref>
-    <ref id="parser_14">
+    <ref id="parser_13">
       <mixed-citation>Vatrican, A. (2015). la modalidad en la gramática: la capacidad en las construcciones saber y poder infinitivo. Revista Española de Lingüística, 45(2), 115–141. --- ERRORS FOUND IN THESE SECTIONS: "Title. "</mixed-citation>
     </ref>
+    <ref id="parser_14">
+      <mixed-citation>Aikhenwald, A (20s22). the. Linguistic Typology, 16(3), 435-485.  --- ERRORS FOUND IN THESE SECTIONS: "No institution found in OpenAlex for the name "Aikhenwald, A". Date. Title. "</mixed-citation>
+    </ref>
     <ref id="parser_15">
-      <mixed-citation>Aikhenwald, A (20s22). the. Linguistic Typology, 16(3), 435-485.  --- ERRORS FOUND IN THESE SECTIONS: "Date. Title. "</mixed-citation>
+      <element-citation publication-type="book">
+        <person-group person-group-type="author">
+          <collab>
+            <named-content content-type="name">Universidad Nacional de La Plata</named-content>
+          </collab>
+        </person-group>
+        <year>2025</year>
+        <source>Titulo de una revista.</source>
+        <publisher-name>No tiene subtitulardopolis.</publisher-name>
+      </element-citation>
+      <mixed-citation>Universidad nacional de la plata (2025). Titulo de una revista. No tiene subtitulardopolis.</mixed-citation>
+    </ref>
+    <ref id="parser_16">
+      <mixed-citation>Aikhenvsal, A. (2012). The essence of mirativity. Linguistic Typology, 16(3), 435-485. https://doi.org/10.1515/lity-2012-0017 --- ERRORS FOUND IN THESE SECTIONS: "Author 'Aikhenvsal, A. ' not found in OpenAlex data for DOI https://doi.org/10.1515/lity-2012-0017."</mixed-citation>
     </ref>
   </ref-list>
 </back>
