@@ -18,8 +18,11 @@ class Row extends Element {
 	}
 
 	public function setContent() {
-		foreach ($this->getDataObject()->getContent() as $content) {
-			$cell = new JatsCell($content);
+		$dataObject = $this->getDataObject(); /* @var $dataObject \docx2jats\objectModel\body\Row */
+		$isHeaderRow = $dataObject->isHeader();
+		
+		foreach ($dataObject->getContent() as $content) {
+			$cell = new JatsCell($content, $isHeaderRow);
 			$this->appendChild($cell);
 			$cell->setContent();
 		}

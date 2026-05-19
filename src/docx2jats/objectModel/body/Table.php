@@ -30,8 +30,14 @@ class Table extends InfoBlock {
 
 		$contentNodes = $this->getXpath()->query($xpathExpression, $this->getDomElement());
 		if ($contentNodes->count() > 0) {
+			$isFirstRow = true;
 			foreach ($contentNodes as $contentNode) {
 				$row = new Row($contentNode, $this->getOwnerDocument(), $this);
+				// Mark first row as header for JATS <thead> generation
+				if ($isFirstRow) {
+					$row->setIsHeader(true);
+					$isFirstRow = false;
+				}
 				$content[] = $row;
 			}
 		}
