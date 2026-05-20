@@ -61,9 +61,40 @@ class Table extends Element {
 		$tableNode = $this->ownerDocument->createElement('table');
 		$this->appendChild($tableNode);
 
+		// Separate header rows from body rows
+		$headerRows = array();
+		$bodyRows = array();
+		
 		foreach ($dataObject->getContent() as $content) {
+			/* @var $content \docx2jats\objectModel\body\Row */
+			if ($content->isHeader()) {
+				$headerRows[] = $content;
+			} else {
+				$bodyRows[] = $content;
+			}
+		}
+
+		// Create thead if there are header rows
+		if (!empty($headerRows)) {
+			$theadNode = $this->ownerDocument->createElement('thead');
+			$tableNode->appendChild($theadNode);
+
+			foreach ($headerRows as $content) {
+				$row = new JatsRow($content);
+				$theadNode->appendChild($row);
+				$row->setContent();
+			}
+		}
+
+		// Create tbody element as required by JATS 1.1 (SPS 1.9)
+		// tbody is always created even if there are no body rows (though that would be unusual)
+		$tbodyNode = $this->ownerDocument->createElement('tbody');
+		$tableNode->appendChild($tbodyNode);
+
+		// Add all body rows inside tbody
+		foreach ($bodyRows as $content) {
 			$row = new JatsRow($content);
-			$tableNode->appendChild($row);
+			$tbodyNode->appendChild($row);
 			$row->setContent();
 		}
 	}

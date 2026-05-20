@@ -17,6 +17,7 @@ class Row extends DataObject {
 
 	private $properties = array();
 	private $cells = array();
+	private $isHeader = false;
 
 	public function __construct(\DOMElement $domElement, Document $ownerDocument, Table $parent) {
 		parent::__construct($domElement, $ownerDocument, $parent);
@@ -55,5 +56,19 @@ class Row extends DataObject {
 
 	public function getContent() {
 		return $this->cells;
+	}
+
+	/**
+	 * @param bool $isHeader
+	 */
+	public function setIsHeader(bool $isHeader): void {
+		$this->isHeader = $isHeader;
+	}
+
+	/**
+	 * @return bool
+	 */
+	public function isHeader(): bool {
+		return $this->isHeader;
 	}
 }

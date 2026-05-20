@@ -13,8 +13,14 @@ use docx2jats\objectModel\DataObject;
 use docx2jats\jats\Par as JatsPar;
 
 class Cell extends Element {
-	public function __construct(DataObject $dataObject) {
-		parent::__construct($dataObject);
+	
+	private $isHeaderCell = false;
+	
+	public function __construct(DataObject $dataObject, bool $isHeaderRow = false) {
+		$this->isHeaderCell = $isHeaderRow;
+		// Use 'th' for header cells, 'td' for regular cells
+		$elementName = $isHeaderRow ? 'th' : 'td';
+		parent::__construct($dataObject, $elementName);
 	}
 
 	public function setContent() {
@@ -35,5 +41,12 @@ class Cell extends Element {
 			$this->appendChild($par);
 			$par->setContent();
 		}
+	}
+
+	/**
+	 * @return bool
+	 */
+	public function isHeaderCell(): bool {
+		return $this->isHeaderCell;
 	}
 }

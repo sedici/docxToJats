@@ -57,6 +57,10 @@ class Text {
 					$domElement->appendChild($nodeElement);
 					if ($type == "ext-link") {
 						$nodeElement->setAttribute("xlink:href", $jatsText->getLink());
+						$extLinkType = LinkTypeHelper::inferType($jatsText->getLink());
+						if ($extLinkType) {
+							$nodeElement->setAttribute("ext-link-type", $extLinkType);
+						}
 					}
 				} else {
 					foreach ($type as $insideKey => $insideType) {
@@ -84,6 +88,10 @@ class Text {
 					$nodeElement->nodeValue = htmlspecialchars($jatsText->getContent());
 					if ($type == "ext-link"){
 						$nodeElement->setAttribute("xlink:href", $jatsText->getLink());
+						$extLinkType = LinkTypeHelper::inferType($jatsText->getLink());
+						if ($extLinkType) {
+							$nodeElement->setAttribute("ext-link-type", $extLinkType);
+						}
 					}
 
 					foreach ($prevElements as $prevKey => $prevElement) {

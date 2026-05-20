@@ -16,11 +16,29 @@ abstract class Element extends \DOMElement {
 
 	private $dataObject;
 
-	public function __construct(DataObject $dataObject) {
+	public function __construct(DataObject $dataObject, string $elementNameOverride = '') {
 
 		$this->dataObject = $dataObject;
 
-		// Determing element name
+		// Determine element name (can be overridden by subclasses)
+		$name = !empty($elementNameOverride) ? $elementNameOverride : $this->determineElementName($dataObject);
+
+		/*
+		$textString = '';
+		foreach ($dataObject->getContent() as $text) {
+			$textString .= $text->getContent();
+		}
+		*/
+
+		if (!empty($name)) parent::__construct($name);
+	}
+
+	/**
+	 * Determine the JATS element name based on the data object class
+	 * @param DataObject $dataObject
+	 * @return string
+	 */
+	protected function determineElementName(DataObject $dataObject): string {
 		$name = '';
 		switch (get_class($dataObject)) {
 			case "docx2jats\objectModel\body\Par":
@@ -46,15 +64,7 @@ abstract class Element extends \DOMElement {
 			case "docx2jats\objectModel\body\Image":
 				$name = 'fig';
 		}
-
-		/*
-		$textString = '';
-		foreach ($dataObject->getContent() as $text) {
-			$textString .= $text->getContent();
-		}
-		*/
-
-		if (!empty($name)) parent::__construct($name);
+		return $name;
 	}
 
 	protected function getDataObject() {
