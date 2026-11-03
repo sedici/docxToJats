@@ -53,7 +53,7 @@ trait Bookmarkable
 			$name = $allBookmarks[$bookMarkActive];
 			$this->bookmarkData[$bookMarkActive]['name'] = $name ;
 			$content = $this->searchBookmarkContentByName($name);
-			if (empty(trim($content)) || strpos($content, 'CSL_CITATION') === false) continue;
+			if (empty(trim((string) $content)) || strpos($content, 'CSL_CITATION') === false) continue;
 			$this->bookmarkData[$bookMarkActive]['content'] = $content;
 			list($instructions, $rawCSL) = Reference::extractRawCSL($content);
 			if (empty($rawCSL)) continue;
